@@ -3647,11 +3647,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\aiapp\\TodoGrpc\\TodoGrpc.csproj",
+      "projectUniqueName": "C:\\aiapp\\TodoGrpc\\TodoGrpc.csproj",
       "projectName": "TodoGrpc",
-      "projectPath": "c:\\aiapp\\TodoGrpc\\TodoGrpc.csproj",
+      "projectPath": "C:\\aiapp\\TodoGrpc\\TodoGrpc.csproj",
       "packagesPath": "C:\\Users\\AG_2021SER01\\.nuget\\packages\\",
-      "outputPath": "c:\\aiapp\\TodoGrpc\\obj\\",
+      "outputPath": "C:\\aiapp\\TodoGrpc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AG_2021SER01\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3677,7 +3677,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3731,7 +3732,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
