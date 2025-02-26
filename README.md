@@ -4,10 +4,10 @@
 
 REST is a triditional CRUD API using HTTP, gRPC using HTTP/2 is invented for high-performance communicaiton between service to service such as microservice. 
 
-## Proto
+## Proto - (interface)
 gRPC defines service contract in proto file, this proto contract needs to be implemented in a web service.
 
-## table
+##
 syntax = "proto3";
 
 option csharp_namespace = "TodoGrpc";
@@ -85,11 +85,10 @@ message DeleteTodoResponse{
 
 ## Services
 implement gRPC contract
-## table
+## 
 using Grpc.Core;
 using TodoGrpc.Data;
 using TodoGrpcService.Models;
-
 
 namespace TodoGrpc.Services
 {
@@ -122,14 +121,8 @@ namespace TodoGrpc.Services
     }
 }
 
-
 ## Test
 postman is used to test this service call as API way.
 ![image](https://github.com/user-attachments/assets/8af9bfb5-a74a-40bf-8176-adfabb7a7969)
 
-## Summary
 
-1, define CRUD contract in proto file
-2, implement contract in service from contract swervice base
-3, test in postman that can be called by clinet web app.
-4, program.cs created URLs for client
