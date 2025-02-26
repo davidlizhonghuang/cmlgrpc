@@ -2,16 +2,13 @@
 
 ## Rest and gRPC
 
-REST is a triditional CRUD API using HTTP, gRPC using HTTP/2 is invented for high-performance communicaiton between service to service such as microservice. 
+REST is a traditional CRUD API using HTTP, gRPC using HTTP/2 is invented for high-performance communication between service to service such as microservice. 
 
 ## Proto - (interface)
 gRPC defines service contract in proto file, this proto contract needs to be implemented in a web service.
 
-##
 syntax = "proto3";
-
 option csharp_namespace = "TodoGrpc";
-
 package todo; //need to be the same as the namespace in the c# code todo.proto
 
 service Todoer {  //crud
@@ -84,7 +81,7 @@ message DeleteTodoResponse{
 
 
 ## Services
-implement gRPC contract
+implement gRPC contract interface
 ## 
 using Grpc.Core;
 using TodoGrpc.Data;
