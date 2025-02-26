@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option csharp_namespace = "TodoGrpc";
+
+package todo; //need to be the same as the namespace in the c# code todo.proto
+
+service Todoer {
+    //create
+    rpc CreateToDo (CreateTodoRequest) returns (CreateTodoResponse){}
+    //read single   
+    rpc ReadTodo (ReadTodoRequest) returns (ReadTodoResponse){}
+    //read all  
+    rpc GetAllTodos (GetAllRequest) returns (ReadTodosResponse){}
+    //read list
+    rpc ReadTodosStream (ReadTodosRequest) returns (stream ReadTodosResponse){}
+    //update
+    rpc UpdateTodo (UpdateTodoRequest) returns (UpdateTodoResponse){}    
+    //delete      
+    rpc DeleteTodo (DeleteTodoRequest) returns (DeleteTodoResponse){}
+
+}
+message CreateTodoRequest{  //totally get from database
+    string title = 1;
+    string description = 2;
+}
+message CreateTodoResponse{
+    int32 id = 1;
+}
+message ReadTodoRequest{
+    int32 id = 1;
+}   
+message ReadTodoResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool isDone = 4;
+}
+message GetAllRequest{
+}
+
+message ReadTodosRequest{
+
+}
+
+message ReadTodosResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool isDone = 4;
+}
+message UpdateTodoRequest{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool isDone = 4;
+}
+message UpdateTodoResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool isDone = 4;
+}
+message DeleteTodoRequest{
+    int32 id = 1;
+}
+message DeleteTodoResponse{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool isDone = 4;
+}
+
+//protoc --csharp_out=./TodoGrpc/TodoGrpc ./TodoGrpc/TodoGrpc/todoit.proto
